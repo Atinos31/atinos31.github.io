@@ -1,0 +1,19 @@
+@media only screen and (min-device-width: 200 px) and (max-device-width: 760 px) and (orientation: landscape or portrait) and (min-resolution: xxx dpi) {}
+
+body {
+    background: none;
+    color: black;
+    font-weight: 800px;
+    background-color: #cccccc;
+    background-blend-mode: lighten;
+    border: 10px groove grey;
+    text-align: center;
+}
+
+img1 {
+    width: 200px;
+}
+
+a {
+    font-weight: 2em;
+}
