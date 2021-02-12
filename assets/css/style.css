@@ -321,28 +321,126 @@ html{
      font-style: italic;
   }
 
- #about a {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	z-index: 2;
-	display: block;
-	-webkit-transform: translate(0, -50%);
-	transform: translate(0, -50%);
-	text-decoration: none;
-    color: #fff!important;
-}
+
 
  .fa-arrow-circle-down{
     font-size:3rem;
     margin-top:2rem;
      color: #fff;
  }
+/*SKILLS*/
+.skills{
+    color: #fff;
+    background: #333;
+    width:100%;
+    padding: 10rem;
+    margin: 5px auto;
+}
+.skills li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.bar{
+    background: #353b48;
+    height:4px;
+    display: block;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span{
+    height:2px;
+    float: left;
+    background:  #2187e7 ;    
+}
+
+.html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.css{
+  width: 70%;
+  animation: css 2s;
+}
+
+.bootstrap{
+    width: 60%;
+    animation: bootstrap 2s;
+}
+
+.javascript{
+    width: 50%;
+    animation:javascript 2s;
+}
+
+.python{
+    width: 20%;
+    animation:python 2s;
+}
+
+.django{
+    width: 5%;
+    animation: django 2s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
 
 
-  
+@keyframes bootstrap{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
 
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
 
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes django{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 5%;
+    }
+}
 
   
 
