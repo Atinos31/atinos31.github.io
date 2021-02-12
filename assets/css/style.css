@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* global styles */
+
+html{
+    scroll-behavior: smooth;
+}
  ul{
      list-style: none;
  }
@@ -20,11 +25,23 @@
      background-size: cover;
  }
 
+ img{
+     max-width: 100%;
+ }
+
+ .img-fluid{
+     width: 100%;
+     height: auto;
+   
+ }
+
+/* main navigation */
  .header{
      position: fixed;
      width: 100%;
      z-index: 3;
-     box-shadow: 1px 1px 4px 0 rgba(255,255,255,.9);
+     box-shadow: 1px 1px 2px 0 rgba(255,255,255,.1);
+     background: #000;
  }
 
  .header ul{
@@ -35,15 +52,18 @@
     color: #fff;
     display: block;
     padding: 20px;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
+    font-family: 'IM Fell Double Pica', serif;
     
 }
 
 .header ul a:hover{
-    background-color: #fff;
-    color: #000;
-}
+   background: linear-gradient(to right,  #ff0000, #9932cc);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 .menu{
     clear:both;
     max-height: 0;
@@ -57,6 +77,14 @@
     display: block;
     font-size: 2em;
     padding: 10px 20px;
+}
+
+.logo:hover{
+     background: linear-gradient(to right, yellow,red);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  
 }
 
 .menu-icon{
@@ -105,7 +133,7 @@
 }
 
 .menu-btn:checked ~ .menu{
-    max-height:300px;
+    max-height:20%;
         
 }
 
@@ -128,6 +156,9 @@
 /* media query */
 
 @media(min-width:768px){
+  .header{
+      padding-top: 1rem ;
+  }
     .header li{
         float: left;
     }
@@ -140,10 +171,92 @@
         clear: none;
         float: right;
         max-height:none ;
-        margin-right: 5px;
+      
     }
 
     .header .menu-icon{
         display: none;
     }
 }
+    /* ABOUT SECTION */
+  /* 2-col-layout */
+  #about{
+      display: grid;
+      grid-template-columns:1fr 2fr;
+      grid-gap: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 7rem;
+      padding-left: 1.2rem;
+  }
+
+  .img{
+      text-align: center;
+      justify-content: center;
+  }
+
+
+ #about .text{
+     padding: 3rem 2rem;
+     text-align: left;
+     justify-content: center;
+     padding-left: 2em;
+     font-size: 1.1rem;
+     background: #333;
+     color: #fff;
+     line-height: 160%;
+  }
+
+  .about-heading{
+    margin-bottom: 1em;
+    font-weight: 600;
+  }
+
+  .hire-btn{
+    margin-top: 2rem;
+    width: 180px;
+    padding:.5em 1.5em;
+    display: inline-block;
+    outline: none;
+    font-weight: 500;
+    border-radius: 50px;
+    background:#e84d1b;
+    color:#fff;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+   
+
+  }
+
+  .hire-btn:hover{
+      text-decoration: none;
+      color: #fff;
+      background:orange;
+      box-shadow: 0 0 0 5px #fff, 0 0 0 10px orange;
+
+  }
+
+  @media(max-width:768px){
+      #about{
+      display: grid;
+      grid-template-columns:1fr;
+      }
+
+      .img{
+         width: 80%;
+         margin: 0 auto;
+         background: black;
+         color: white;
+         font-size: 1em;
+        display: flex;
+      }
+  }
+  
+
+
+
+  
+
+
+
